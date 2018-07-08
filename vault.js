@@ -1,25 +1,22 @@
 'use strict';
 module.exports = function() {
   
-    console.log('aloha');
+    // console.log('aloha');
     const mySecretVault = {};
     
     const setValue = function(key,value){
         if(!key){
             return null;
         }else{
-        mySecretVault.globalKey = key;
-        mySecretVault.globalValue = value;
+        mySecretVault[key] = value;
         }
     }
     
-    const getValue = function(setKey){
-        if(!setKey){
-            return null
-        }else if (setKey !== mySecretVault.globalKey){
+    const getValue = function(key){
+        if((!key) || (typeof mySecretVault[key] == "undefined")){
             return null;
-        }else if (setKey === mySecretVault.globalKey){
-            return mySecretVault.globalValue;
+        }else{
+            return mySecretVault[key];
         }
     }
     

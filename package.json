@@ -21,6 +21,6 @@
   "homepage": "https://github.com/devleague/The-Vault#readme",
   "devDependencies": {
     "chai": "^2.3.0",
-    "mocha": "^2.2.5"
+    "mocha": "^5.2.0"
   }
 }
